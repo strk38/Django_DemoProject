@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+{%load static%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Machine Learning</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        {% if b == 2 %}
+        <h2>
+            Welcome to Machine Learning '{{a|upper}} ' {{b}}' month course
+        </h2>
+        {% else %}
+        <h2>
+            Welcome to Machine Learning '{{a|length}} ' {{b}}' month course
+        </h2>
+        {% endif %}
+        <div class='margin'>
+            <div class='padding'>
+                <p>
+                    <del class="d">
+                        (a+b)
+                    </del><sup><mark>{{b}}</mark></sup>
+                </p>
+            </div>
+        </div>
+
+        <form action="">
+            <pre id="hello">
+            Name: <input type='text' name='' id='' placeholder='Enter your name'>  <input type='email' name='' id='' value='skarlet@gmail' readonly> <br>
+            Email: <input type='email' name='' id='' placeholder='Enter your email'>  Password:<input type='password' name='' id='' placeholder='Enter your password'>
+            Gender :<input type='radio' name='Gender' id='' >Male   <input type='radio' name='Gender' id='' >Female
+            <input type='checkbox' name='' id=''>ML  <input type='checkbox' name='' id=''>RF<br>
+            
+            <input type='file' name='' id=''>
+            <br>
+            <input type='date' name='' id='' >
+
+            <input type='submit' value='Submit'>    <input type='Reset' value='Reset'>
+            </pre>
+        </form>
+
+        <script src="" async defer></script>
+    </body>
+</html>

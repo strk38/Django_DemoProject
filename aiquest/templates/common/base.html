@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+ <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+ <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+ <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+ <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+ {% load static %}
+ <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        
+        <title>
+            {% block title %} {% endblock title %}
+        </title>
+        
+    </head>
+    <body>
+        <div class="text-bg-light p-3">   <!--Light with contrasting color -->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="#">About</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'blogs' %}">Blogs</a>
+                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="{% url 'machine_learning_base' %}">Machine Learning</a></li>  <!--CHECK HERE -->
+                        <li class="nav-item"><a class="nav-link" href="/ml/rf/">Random Forest</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/ml/dt/">Decision Tree</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/ml/dl/">Deep Learning</a></li>
+
+                        <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Data Science
+                                </button>
+                                <ul class="dropdown-menu" >
+                                    <li><a class="dropdown-item" href="/ml/machine/">Machine Learning</a></li>
+                                    <li><a class="dropdown-item" href="/ml/rf/">Random Forest</a></li>
+                                    <li><a class="dropdown-item" href="/ml/dt/">Decision Tree</a></li>
+                                    <li><a class="dropdown-item" href="/ml/dl/">Deep Learning</a></li>
+                                </ul>
+                        </div>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+
+            <div class="alert alert-primary" role="alert">
+                {% block alert %}
+                {% endblock alert %}
+            </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+            <script src="" async defer></script>
+            <script src="{% static 'js/bootstrap.min.js' %}" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        </div>
+    </body>
+ </html>
